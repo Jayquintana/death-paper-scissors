@@ -1,1 +1,1 @@
-# death-tac-toe
+# death-paper-scissors
