@@ -1,0 +1,65 @@
+/* fonts
+font-family: "Roboto Mono";
+font-family: "Bebas Neue";
+
+font-weight: Thin 100
+Extra-light 200
+Regular 400
+*/
+
+* {
+  margin: 0;
+  border: 1px black
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* player-side */
+.player-side,
+.computer-side {
+  width: 30%;
+  background-image: url('assets/brick-comic.jpeg');
+}
+
+/* computer-side */
+
+
+/* choose your game section */
+.choose-your-game-section {
+  width: 80%;
+  background-image: url('assets/city-comig.jpeg');
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.death-paper-scissors {
+  font-family: "Bebas Neue";
+  width: 90%;
+  height: 9%;
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+
+.choose-game-title {
+font-family: "Roboto Mono";
+color: white;
+font-size: 30px;
+
+}
