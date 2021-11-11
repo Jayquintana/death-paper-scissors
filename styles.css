@@ -26,25 +26,65 @@ main {
   height: 100%;
 }
 
+p {
+  font-family: "Roboto Mono";
+}
+
+h2 {
+  font-family: "Bebas Neue";
+}
+
 /* player-side */
 .player-side,
-.computer-side {
+.death-side {
   width: 30%;
   background-image: url('assets/brick-comic.jpeg');
 }
 
-/* computer-side */
+.player-img {
+  height: 80px;
+}
 
+
+
+/* computer-side */
+.death-side,
+.player-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.death-title,
+.human-title {
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  color: white;
+}
+
+.death-wins,
+.human-wins {
+  font-size: 30px;
+  color: white;
+}
+
+.death-img {
+  height: 80px;
+  margin-left: 20px;
+}
 
 /* choose your game section */
 .choose-your-game-section {
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   background-image: url('assets/city-comig.jpeg');
 }
 
 .title-box {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -61,5 +101,38 @@ main {
 font-family: "Roboto Mono";
 color: white;
 font-size: 30px;
+}
+.game-selection-box{
+  margin-top: 3%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
 
+/* classic game box */
+.classic-game,
+.death-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: 50%;
+}
+
+.classic-game {
+  background-color: #CD5C5C;
+}
+
+/* death game box */
+.death-game {
+  margin-top: 5%;
+  background-color: #bb0a1e;
+
+}
+
+.hidden {
+  display: none;
 }
