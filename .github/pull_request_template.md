@@ -4,7 +4,7 @@
 -
 ### Were there any issues that arose?
 -
-### Is there anything that you need from your teammate?
+### Where should the reviewer start?
 -
 ### Refactor checklist
 - [] Check variable and parameter names: are they descriptive and unique?
@@ -13,4 +13,4 @@
 - [] Is the syntax consistent? (e.g. use of semicolons, blank lines)
 - [] Are commit messages formatted correctly?
 
-### Any other comments, questions, or concerns?
+### goals?
