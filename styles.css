@@ -34,6 +34,25 @@ h2 {
   font-family: "Bebas Neue";
 }
 
+/* hover buttons */
+
+.rock-img:hover,
+.paper-img:hover,
+.scissors-img:hover,
+.death-img:hover,
+.robot-img:hover{
+  background-color: #CD5C5C;
+  cursor: pointer;
+}
+
+.classic-game:hover,
+.death-game:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+
+
 /* player-side */
 .player-side,
 .death-side {
@@ -68,7 +87,7 @@ h2 {
   color: white;
 }
 
-.death-img {
+.death-img-wins {
   height: 80px;
   margin-left: 20px;
 }
@@ -77,7 +96,8 @@ h2 {
 .choose-your-game-section {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  align-items: center;
+  width: 100%;
   background-image: url('assets/city-comig.jpeg');
 }
 
@@ -86,6 +106,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .death-paper-scissors {
@@ -103,8 +124,9 @@ color: white;
 font-size: 30px;
 }
 .game-selection-box{
-  margin-top: 3%;
+  margin-top: 5%;
   height: 70%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -130,7 +152,44 @@ font-size: 30px;
 .death-game {
   margin-top: 5%;
   background-color: #bb0a1e;
+}
 
+
+/* choose your fighter */
+.choose-your-fighter {
+  margin-top: 3%;
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #bb0a1e;
+  border-radius: 50px;
+}
+
+.rock-img,
+.paper-img,
+.scissors-img{
+  height: 80%;
+  width: 50%
+}
+
+.robot-img,
+.death-img {
+  height: 80%;
+  width: 30%;
+}
+
+.rock-paper-scissors-img,
+.death-robot-img{
+  display: flex;
+  justify-content: center;
+  height: 30%;
+}
+
+.death-robot-img {
+  margin-top: 5%;
 }
 
 .hidden {
