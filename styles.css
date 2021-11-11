@@ -1,0 +1,197 @@
+/* fonts
+font-family: "Roboto Mono";
+font-family: "Bebas Neue";
+
+font-weight: Thin 100
+Extra-light 200
+Regular 400
+*/
+
+* {
+  margin: 0;
+  border: 1px black
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+p {
+  font-family: "Roboto Mono";
+}
+
+h2 {
+  font-family: "Bebas Neue";
+}
+
+/* hover buttons */
+
+.rock-img:hover,
+.paper-img:hover,
+.scissors-img:hover,
+.death-img:hover,
+.robot-img:hover{
+  background-color: #CD5C5C;
+  cursor: pointer;
+}
+
+.classic-game:hover,
+.death-game:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+
+
+/* player-side */
+.player-side,
+.death-side {
+  width: 30%;
+  background-image: url('assets/brick-comic.jpeg');
+}
+
+.player-img {
+  height: 80px;
+}
+
+
+
+/* computer-side */
+.death-side,
+.player-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.death-title,
+.human-title {
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  color: white;
+}
+
+.death-wins,
+.human-wins {
+  font-size: 30px;
+  color: white;
+}
+
+.death-img-wins {
+  height: 80px;
+  margin-left: 20px;
+}
+
+/* choose your game section */
+.choose-your-game-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-image: url('assets/city-comig.jpeg');
+}
+
+.title-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.death-paper-scissors {
+  font-family: "Bebas Neue";
+  width: 90%;
+  height: 9%;
+  color: white;
+  font-size: 80px;
+  text-align: center;
+}
+
+.choose-game-title {
+font-family: "Roboto Mono";
+color: white;
+font-size: 30px;
+}
+.game-selection-box{
+  margin-top: 5%;
+  height: 70%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* classic game box */
+.classic-game,
+.death-game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  height: 50%;
+}
+
+.classic-game {
+  background-color: #CD5C5C;
+}
+
+/* death game box */
+.death-game {
+  margin-top: 5%;
+  background-color: #bb0a1e;
+}
+
+
+/* choose your fighter */
+.choose-your-fighter {
+  margin-top: 3%;
+  height: 60%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: #bb0a1e;
+  border-radius: 50px;
+}
+
+.rock-img,
+.paper-img,
+.scissors-img{
+  height: 80%;
+  width: 50%
+}
+
+.robot-img,
+.death-img {
+  height: 80%;
+  width: 30%;
+}
+
+.rock-paper-scissors-img,
+.death-robot-img{
+  display: flex;
+  justify-content: center;
+  height: 30%;
+}
+
+.death-robot-img {
+  margin-top: 5%;
+}
+
+.hidden {
+  display: none;
+}
