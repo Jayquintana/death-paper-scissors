@@ -1,4 +1,7 @@
+//global variables
+var newGame = new Game()
 
+// dom related 
 var gameSelection = document.querySelector('.game-selection-box');
 var chooseFighterSection = document.querySelector('.choose-your-fighter')
 
@@ -37,6 +40,6 @@ function createDeathGame() {
   showElement(chooseFighterSection)
 }
 
-function findTarget(event) {
+function (event) {
   console.log(event.target.id);
 }
