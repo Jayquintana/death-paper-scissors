@@ -1,7 +1,7 @@
 //global variables
-var newGame = new Game()
+var newGame = new Game();
 
-// dom related 
+// dom related
 var gameSelection = document.querySelector('.game-selection-box');
 var chooseFighterSection = document.querySelector('.choose-your-fighter')
 
@@ -16,7 +16,7 @@ var classicGameButton = document.querySelector('.classic-game');
 var deathGameButton = document.querySelector('.death-game')
 
 //event listeners
-window.addEventListener('click', findTarget)
+chooseFighterSection.addEventListener('click', chooseFighter)
 classicGameButton.addEventListener('click',createClassicGame)
 deathGameButton.addEventListener('click',createDeathGame)
 
@@ -40,6 +40,31 @@ function createDeathGame() {
   showElement(chooseFighterSection)
 }
 
-function (event) {
-  console.log(event.target.id);
+function targetElement(element, fireFunction) {
+  if (event.target.id === element) {
+      fireFunction
+  }
+}
+
+function chooseFighter() {
+  newGame.startClassicGame(event.target.id)
+  newGame.checkForWin()
+  console.log(newGame.computer.weapon);
+
+
+}
+
+function displayUserIcon() {
+showElement(element)
+setTimeout(hideElement(element), 5000)
+// need to display the player icon with accosiated piece selected
+// need a way to display the user and the computers choice to compare them and only for a split second
+//
+}
+
+function displayWinner() {
+  hideElement(rock)
+  hideElement(paper)
+  hideElement(scissors)
+
 }
