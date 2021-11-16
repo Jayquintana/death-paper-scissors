@@ -1,5 +1,5 @@
 class Player {
-  contructor(name, token) {
+  constructor(name, token) {
     this.name = name;
     this.token = token;
     this.wins = 0;
@@ -13,24 +13,23 @@ class Player {
   retrieveWinsFromStorage() {
     var getUserInput = localStorage.getItem(this.name);
     var parseData = JSON.parse(getUserInput)
+    this.wins = parseData
     return parseData
   }
 
-
-
-  takeTurn(playerChoice, array) {
-    if (this.name === 'death') {
-      this.weapon = getRandomIndex(array)
-    } else {
-      this.weapon = playerChoice;
+  takeTurn(weapon, array) {
+    if (this.name === 'Human') {
+      this.weapon = weapon
+    } else if (this.name === 'Death') {
+      this.weapon = array
     }
   }
 
- getRandomIndex(array) {
- return Math.floor(Math.random() * array.length);
+  randomPiece(array) {
+    return Math.floor(Math.random() * array.length);
   }
 
   updateWins() {
-    this.wins++
+    this.wins++;
   }
 }

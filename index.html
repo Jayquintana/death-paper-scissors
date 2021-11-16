@@ -16,32 +16,37 @@
           <img class="player-img" src="assets/exercise.png" alt="human-logo">
           <h2 class="human-title">Human</h2>
           <p class="human-wins">Wins: 0</p>
+          <div class="change-game-box hidden">
+            <button class="change-game-button">Change Game</button>
+          </div>
         </aside>
         <section class="choose-your-game-section">
           <div class="title-box">
             <h1 class="death-paper-scissors">DEATH! PAPER! SCISSORS!</h1>
             <p class="choose-game-title">Choose Your Game!</p>
           </div>
-          <div class="choose-your-fighter hidden">
-            <div class="rock-paper-scissors-img">
-              <img class="rock-img" id="rock" src="assets/rock.svg" alt="rock-image">
-              <img class="paper-img" id="paper" src="assets/paper.svg" alt="paper-image">
-              <img class="scissors-img"  id="scissors" src="assets/scissors.svg" alt="scissors-image">
+          <article class="choose-your-fighter hidden">
+            <h2 class="its-a-draw hidden">Its A Draw!</h2>
+            <div class="game-images">
+              <div class="rock-paper-scissors-img">
+                <img class="rock-img pieces" id="rock" src="assets/rock.svg" alt="rock-image">
+                <img class="paper-img pieces" id="paper" src="assets/paper.svg" alt="paper-image">
+                <img class="scissors-img pieces"  id="scissors" src="assets/scissors.svg" alt="scissors-image">
+              </div>
+              <div class="death-robot-img">
+                <img class="death-img pieces" id="death" src="assets/Death.svg" alt="death-image">
+                <img class="robot-img pieces" id="robot" src="assets/robot.png" alt="paper-image">
+              </div>
             </div>
-            <div class="death-robot-img">
-              <img class="death-img" id="death" src="assets/Death.svg" alt="death-image">
-              <img class="robot-img" id="robot" src="assets/robot.png" alt="paper-image">
-
-            </div>
-          </div>
-          <div class="game-selection-box">
-            <button class="classic-game">
+          </article>
+          <article class="game-selection-box">
+            <button class="classic-game" id="classic">
               <h2> <img src="" alt=""> Classic <img src="" alt=""> </h2>
               <p>Rock > Scissors</p>
               <p>Paper > Rock</p>
               <p>Scissors > Paper</p>
             </button>
-            <button class="death-game">
+            <button class="death-game" id="death">
               <h2><img src="" alt="">Death! Paper! Scissors!<img src="" alt=""></h2>
               <p>Rock > Scissors & Death</p>
               <p>Paper > Rock & Robots</p>
@@ -49,7 +54,7 @@
               <p>Death > Paper & Robots</p>
               <p>Robots > Scissors & Rock</p>
             </button>
-          </div>
+          </article>
         </section>
         <aside class="death-side">
           <img class="death-img-wins" src="assets/Death.svg" alt="death-logo">
