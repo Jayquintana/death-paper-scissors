@@ -13,6 +13,7 @@ class Player {
   retrieveWinsFromStorage() {
     var getUserInput = localStorage.getItem(this.name);
     var parseData = JSON.parse(getUserInput)
+    this.wins = parseData
     return parseData
   }
 
@@ -29,6 +30,6 @@ class Player {
   }
 
   updateWins() {
-    this.wins += 1;
+    this.wins++;
   }
 }
