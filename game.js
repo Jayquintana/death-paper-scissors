@@ -16,42 +16,33 @@ class Game {
 
       if (this.user.weapon === 'rock' && this.computer.weapon === 'scissors' || this.computer.weapon === 'death') {
         this.winner = `${this.user.name} Wins!`
-        this.user.updateWins()
       } else if (this.user.weapon === 'rock' && this.computer.weapon === 'paper' || this.computer.weapon === 'robots') {
         this.winner = `${this.computer.name} Wins!`
-        this.computer.updateWins()
       }
 
       if (this.user.weapon === 'paper' && this.computer.weapon === 'rock' || this.computer.weapon === 'robots') {
         this.winner = `${this.user.name} Wins!`
-        this.user.updateWins()
       } else if (this.user.weapon === 'paper' && this.computer.weapon === 'scissors' || this.computer.weapon === 'death') {
         this.winner = `${this.computer.name} Wins!`
-        this.computer.updateWins()
       }
 
       if (this.user.weapon === 'scissors' && this.computer.weapon === 'paper' || this.computer.weapon === 'death') {
         this.winner = `${this.user.name} Wins!`
-        this.user.updateWins()
       } else if (this.user.weapon === 'scissors' && this.computer.weapon === 'rock' || this.computer.weapon === 'robots') {
         this.winner = `${this.computer.name} Wins!`
-        this.computer.updateWins()
       }
 
       if (this.user.weapon === 'death' && this.computer.weapon === 'paper' || this.computer.weapon === 'robots') {
         this.winner = `${this.user.name} Wins!`
-        this.user.updateWins()
       } else if (this.user.weapon === 'death' && this.computer.weapon === 'rock' || this.computer.weapon === 'scissors') {
         this.winner = `${this.computer.name} Wins!`
-        this.computer.updateWins()
       }
 
       if (this.user.weapon === 'robots' && this.computer.weapon === 'scissors' || this.computer.weapon === 'rock') {
         this.winner = `${this.user.name} Wins!`
-        this.user.updateWins()
+
       } else if (this.user.weapon === 'robots' && this.computer.weapon === 'death' || this.computer.weapon === 'paper') {
         this.winner = `${this.computer.name} Wins!`
-        this.computer.updateWins()
       }
     }
 
