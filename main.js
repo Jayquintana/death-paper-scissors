@@ -26,7 +26,7 @@ var deathGameButton = document.querySelector('.death-game');
 var changeGameButton = document.querySelector('.change-game-box')
 
 //event listeners
-gameImages.addEventListener('click',createClassicGame )
+gameImages.addEventListener('click',playClassicGame )
 chooseYourGameSection.addEventListener('click', chooseGame);
 classicGameButton.addEventListener('click',goToClassicGame);
 deathGameButton.addEventListener('click',goToDeathGame);
@@ -77,15 +77,24 @@ function changeGame() {
 
 
 //choose fighter
-function createClassicGame() {
+function playClassicGame() {
   newGame.startClassicGame(event.target.id)
   newGame.checkForWin()
+  addWins()
   console.log(newGame);
-  humanWinsTitle.innerText = `Wins: ${newGame.user.wins}`
-  deathTitle.innerText = `Wins: ${newGame.computer.wins}`
   chooseGameTitle.innerText = `${newGame.winner}`
   showGamePieces(newGame.user.weapon, newGame.computer.weapon);
   setTimeout(resetGame, 3000)
+}
+
+function addWins() {
+  if (newGame.winner === 'Human Wins!') {
+    newGame.user.updateWins()
+    humanWinsTitle.innerText = `Wins: ${newGame.user.wins}`
+  } else if (newGame.winner === 'Death Wins!') {
+      newGame.computer.updateWins()
+      deathTitle.innerText = `Wins: ${newGame.computer.wins}`
+  }
 }
 
 function resetGame() {
@@ -110,11 +119,6 @@ function hideGamePieces() {
   for (var i = 0; i < pieces.length; i++) {
     showElement(pieces[i]);
   }
-}
-
-function chooseDeathFighter() {
-  newGame.startDeathGame(event.target.id)
-  newGame.checkForWin()
 }
 
 function displayUserIcon() {
