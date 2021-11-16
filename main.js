@@ -22,13 +22,15 @@ var deathAndRobotImg = document.querySelector('.death-robot-img')
 
 //buttons
 var classicGameButton = document.querySelector('.classic-game');
-var deathGameButton = document.querySelector('.death-game')
+var deathGameButton = document.querySelector('.death-game');
+var changeGameButton = document.querySelector('.change-game-box')
 
 //event listeners
 gameImages.addEventListener('click',createClassicGame )
 chooseYourGameSection.addEventListener('click', chooseGame);
 classicGameButton.addEventListener('click',goToClassicGame);
 deathGameButton.addEventListener('click',goToDeathGame);
+changeGameButton.addEventListener('click', changeGame)
 
 
 //reusable functions
@@ -45,21 +47,32 @@ function goToClassicGame() {
   hideElement(gameSelection);
   hideElement(deathAndRobotImg);
   showElement(chooseFighterSection)
+  hideElement(changeGameButton)
   chooseGameTitle.innerText = 'Choose Your Fighter!'
 }
 
 function goToDeathGame() {
   hideElement(gameSelection)
   showElement(chooseFighterSection)
+  chooseGameTitle.innerText = 'Choose Your Fighter!'
 }
 
 //game selection
 function chooseGame() {
   if (event.target.id === 'classic') {
     goToClassicGame()
+    showElement(changeGameButton)
   }  else if (event.target.id === 'death') {
     goToDeathGame()
+    showElement(changeGameButton)
   }
+}
+
+function changeGame() {
+  showElement(gameSelection);
+  showElement(deathAndRobotImg);
+  hideElement(chooseFighterSection)
+  chooseGameTitle.innerText = 'Choose Your Game!'
 }
 
 
@@ -70,7 +83,7 @@ function createClassicGame() {
   console.log(newGame);
   humanWinsTitle.innerText = `Wins: ${newGame.user.wins}`
   deathTitle.innerText = `Wins: ${newGame.computer.wins}`
-  chooseGameTitle.innerText = `${newGame.winner} `
+  chooseGameTitle.innerText = `${newGame.winner}`
   showGamePieces(newGame.user.weapon, newGame.computer.weapon);
   setTimeout(resetGame, 3000)
 }
