@@ -168,11 +168,20 @@ font-size: 40px;
   border-radius: 50px;
 }
 
+.game-images{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 50%;
+  width: 100%;
+}
+
 .rock-img,
 .paper-img,
 .scissors-img{
-  height: 80%;
-  width: 50%
+  height: 90%;
+  width: 60%
 }
 
 .robot-img,
@@ -185,7 +194,7 @@ font-size: 40px;
 .death-robot-img{
   display: flex;
   justify-content: center;
-  height: 30%;
+  height: 50%;
 }
 
 .death-robot-img {
@@ -195,7 +204,22 @@ font-size: 40px;
 .display-choice {
   height: 20px;
   width: 20px;
+}
 
+.its-a-draw {
+  font-family: "Bebas Neue";
+  font-size: 50px;
+  text-align: center;
+}
+
+.rock-box,
+.paper-box,
+.scissors-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .hidden {
