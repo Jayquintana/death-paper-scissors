@@ -11,9 +11,9 @@ class Game {
 
     checkForWin() {
       if(this.user.weapon === this.computer.weapon) {
-        return 'Draw!'
+        return this.winner = 'Draw!'
       }
-
+      
       if (this.user.weapon === 'rock' && this.computer.weapon === 'scissors' || this.computer.weapon === 'death') {
         this.winner = this.user.name
         this.user.updateWins()
@@ -70,6 +70,17 @@ class Game {
       this.computer.takeTurn(weapon, this.classicPieces[this.user.randomPiece(this.classicPieces)]);
     }
 
+    startDeathGame(weapon) {
+      this.user.takeTurn(weapon);
+      this.computer.takeTurn(weapon, this.deathPieces[this.user.randomPiece(this.deathPieces)]);
+    }
+
+    resetGame() {
+      this.user = new Player('Human', 'assets/exercise.png');
+      this.computer = new Player('Death', 'assets/Death.svg');
+      this.winner = null;
+
+    }
     //a way to reset the games board to begin a new game
 
 
