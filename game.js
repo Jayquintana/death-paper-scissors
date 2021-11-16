@@ -13,55 +13,45 @@ class Game {
       if(this.user.weapon === this.computer.weapon) {
         return this.winner = 'Draw!'
       }
-      
+
       if (this.user.weapon === 'rock' && this.computer.weapon === 'scissors' || this.computer.weapon === 'death') {
-        this.winner = this.user.name
+        this.winner = `${this.user.name} Wins!`
         this.user.updateWins()
-        return `${this.winner} Wins!`
       } else if (this.user.weapon === 'rock' && this.computer.weapon === 'paper' || this.computer.weapon === 'robots') {
-        this.winner = this.computer.name
+        this.winner = `${this.computer.name} Wins!`
         this.computer.updateWins()
-        return `${this.winner} Wins!`
       }
 
       if (this.user.weapon === 'paper' && this.computer.weapon === 'rock' || this.computer.weapon === 'robots') {
-        this.winner = this.user.name
+        this.winner = `${this.user.name} Wins!`
         this.user.updateWins()
-        return `${this.winner} Wins!`
       } else if (this.user.weapon === 'paper' && this.computer.weapon === 'scissors' || this.computer.weapon === 'death') {
-        this.winner = this.computer.name
+        this.winner = `${this.computer.name} Wins!`
         this.computer.updateWins()
-        return `${this.winner} Wins!`
       }
 
       if (this.user.weapon === 'scissors' && this.computer.weapon === 'paper' || this.computer.weapon === 'death') {
-        this.winner = this.user.name
+        this.winner = `${this.user.name} Wins!`
         this.user.updateWins()
-        return `${this.winner} Wins!`
       } else if (this.user.weapon === 'scissors' && this.computer.weapon === 'rock' || this.computer.weapon === 'robots') {
-        this.winner = this.computer.name
+        this.winner = `${this.computer.name} Wins!`
         this.computer.updateWins()
-        return `${this.winner} Wins!`
       }
 
       if (this.user.weapon === 'death' && this.computer.weapon === 'paper' || this.computer.weapon === 'robots') {
-        this.winner = this.user.name
+        this.winner = `${this.user.name} Wins!`
         this.user.updateWins()
-        return `${this.winner} Wins!`
       } else if (this.user.weapon === 'death' && this.computer.weapon === 'rock' || this.computer.weapon === 'scissors') {
-        this.winner = this.computer.name
+        this.winner = `${this.computer.name} Wins!`
         this.computer.updateWins()
-        return `${this.winner} Wins!`
       }
 
       if (this.user.weapon === 'robots' && this.computer.weapon === 'scissors' || this.computer.weapon === 'rock') {
-        this.winner = this.user.name
+        this.winner = `${this.user.name} Wins!`
         this.user.updateWins()
-        return `${this.winner} Wins!`
       } else if (this.user.weapon === 'robots' && this.computer.weapon === 'death' || this.computer.weapon === 'paper') {
-        this.winner = this.computer.name
+        this.winner = `${this.computer.name} Wins!`
         this.computer.updateWins()
-        return `${this.winner} Wins!`
       }
     }
 
