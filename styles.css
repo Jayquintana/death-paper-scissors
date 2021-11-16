@@ -46,7 +46,8 @@ h2 {
 }
 
 .classic-game:hover,
-.death-game:hover {
+.death-game:hover,
+.change-game-button:hover {
   cursor: pointer;
   opacity: 80%;
 }
@@ -62,6 +63,18 @@ h2 {
 
 .player-img {
   height: 80px;
+}
+
+.change-game-box {
+  height: 100%;
+}
+
+.change-game-button {
+background-color: #CD5C5C;
+font-family: "Roboto Mono";
+height: 30px;
+margin-top: 30%;
+border-radius: 5px;
 }
 
 
