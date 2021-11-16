@@ -2,11 +2,20 @@
 var newGame = new Game();
 
 // dom related
+
+//sections
 var gameSelection = document.querySelector('.game-selection-box');
-var chooseFighterSection = document.querySelector('.choose-your-fighter')
+var chooseFighterSection = document.querySelector('.choose-your-fighter');
+var chooseYourGameSection = document.querySelector('.choose-your-game-section');
+var pieces = document.querySelectorAll('.pieces')
+var gameImages = document.querySelector('.game-images')
 
 //titles
-var chooseGameTitle = document.querySelector('.choose-game-title')
+var chooseGameTitle = document.querySelector('.choose-game-title');
+var humanWinsTitle = document.querySelector('.human-wins');
+var deathTitle = document.querySelector('.death-wins');
+var drawTitle = document.querySelector('.its-a-draw')
+
 
 //imgs
 var deathAndRobotImg = document.querySelector('.death-robot-img')
@@ -16,10 +25,13 @@ var classicGameButton = document.querySelector('.classic-game');
 var deathGameButton = document.querySelector('.death-game')
 
 //event listeners
-chooseFighterSection.addEventListener('click', chooseFighter)
-classicGameButton.addEventListener('click',createClassicGame)
-deathGameButton.addEventListener('click',createDeathGame)
+gameImages.addEventListener('click',createClassicGame )
+chooseYourGameSection.addEventListener('click', chooseGame);
+classicGameButton.addEventListener('click',goToClassicGame);
+deathGameButton.addEventListener('click',goToDeathGame);
 
+
+//reusable functions
 function hideElement(element) {
   element.classList.add('hidden');
 }
@@ -28,33 +40,72 @@ function showElement(element) {
   element.classList.remove('hidden');
 }
 
-function createClassicGame() {
+//hide button and show game
+function goToClassicGame() {
   hideElement(gameSelection);
   hideElement(deathAndRobotImg);
   showElement(chooseFighterSection)
   chooseGameTitle.innerText = 'Choose Your Fighter!'
 }
 
-function createDeathGame() {
+function goToDeathGame() {
   hideElement(gameSelection)
   showElement(chooseFighterSection)
 }
 
-function targetElement(element, fireFunction) {
-  if (event.target.id === element) {
-      fireFunction
+//game selection
+function chooseGame() {
+  if (event.target.id === 'classic') {
+    goToClassicGame()
+  }  else if (event.target.id === 'death') {
+    goToDeathGame()
   }
 }
 
-function chooseFighter() {
+
+//choose fighter
+function createClassicGame() {
   newGame.startClassicGame(event.target.id)
   newGame.checkForWin()
-  console.log(newGame.computer.weapon);
+  console.log(newGame);
+  humanWinsTitle.innerText = `Wins: ${newGame.user.wins}`
+  deathTitle.innerText = `Wins: ${newGame.computer.wins}`
+  chooseGameTitle.innerText = `${newGame.winner} `
+  showGamePieces(newGame.user.weapon, newGame.computer.weapon);
+  setTimeout(resetGame, 3000)
+}
 
+function resetGame() {
+  chooseGameTitle.innerText = 'Choose Your Fighter!'
+  hideGamePieces()
+  hideElement(drawTitle);
 
 }
 
+function showGamePieces(humanWeapon, computerWeapon) {
+  for (var i = 0; i < pieces.length; i++) {
+    hideElement(pieces[i]);
+    if (humanWeapon === pieces[i].id || computerWeapon === pieces[i].id) {
+      showElement(pieces[i]);
+    } else if (humanWeapon === computerWeapon) {
+      showElement(drawTitle)
+    }
+  }
+}
+
+function hideGamePieces() {
+  for (var i = 0; i < pieces.length; i++) {
+    showElement(pieces[i]);
+  }
+}
+
+function chooseDeathFighter() {
+  newGame.startDeathGame(event.target.id)
+  newGame.checkForWin()
+}
+
 function displayUserIcon() {
+var displayIcon = document.querySelectorAll('.display-choice')
 showElement(element)
 setTimeout(hideElement(element), 5000)
 // need to display the player icon with accosiated piece selected
@@ -62,9 +113,13 @@ setTimeout(hideElement(element), 5000)
 //
 }
 
-function displayWinner() {
-  hideElement(rock)
-  hideElement(paper)
-  hideElement(scissors)
 
-}
+
+
+// need to do
+// toggle pieces within a win or a Draw
+//update game wins when a game is played
+// set timeout for the game after a game is played
+//incorperate reset game
+//find a way to choose game selection
+//create a button that allows the user to go choose another game
