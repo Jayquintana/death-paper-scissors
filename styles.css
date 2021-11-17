@@ -34,6 +34,10 @@ h2 {
   font-family: "Bebas Neue";
 }
 
+
+.pointer-none{
+  pointer-events: none;
+}
 /* hover buttons */
 
 .rock-img:hover,
@@ -51,8 +55,6 @@ h2 {
   cursor: pointer;
   opacity: 80%;
 }
-
-
 
 /* player-side */
 .player-side,
@@ -136,6 +138,7 @@ font-family: "Roboto Mono";
 color: white;
 font-size: 40px;
 }
+
 .game-selection-box{
   margin-top: 5%;
   height: 70%;
@@ -161,12 +164,21 @@ font-size: 40px;
   background-color: #CD5C5C;
 }
 
+.classic-game p,
+.classic-game h2 {
+  pointer-events: none;
+}
+
 /* death game box */
 .death-game {
   margin-top: 5%;
   background-color: #bb0a1e;
 }
 
+.death-game p,
+.death-game h2 {
+  pointer-events: none;
+}
 
 /* choose your fighter */
 .choose-your-fighter {
@@ -202,6 +214,7 @@ font-size: 40px;
   height: 80%;
   width: 30%;
 }
+
 
 .rock-paper-scissors-img,
 .death-robot-img{
