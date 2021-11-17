@@ -21,3 +21,9 @@ Death, Paper, Scissors is a web game that allows the user to play a good old fas
 ### Contributors
 - Jacob Quintana - [@jayquintana](https://github.com/Jayquintana)
 
+Technologies Used :
+Text Editor - Atom
+
+Languages - JavaScript, HTML, CSS
+
+
