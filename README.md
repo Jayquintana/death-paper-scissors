@@ -1,7 +1,8 @@
 # Death! Paper! Scissors!
 
 ## Installation
-Fork and clone this repo.
+Fork and clone this repo. 
+[live site!]( https://jayquintana.github.io/death-paper-scissors/)
 
 ![App Demo](https://github.com/Jayquintana/death-paper-scissors/blob/main/assets/death%2Cpaper%2Cscissors.gif)
 
